@@ -10,7 +10,6 @@ const Hours = () => {
             <h3>Office Hours</h3>
             <p>Monday-Friday: 9am-5pm</p>
             <p>Saturday and Sunday closed</p>
-            <p></p>
         </div>
     );
 };
