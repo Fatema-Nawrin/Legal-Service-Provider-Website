@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Employment Contracts",
+        "price": 600,
+        "description": "This service will include review of existing contracts by maintaining conflicts of interest,protection of work product, confidentiality and provides legal advice.",
+        "img": "https://images.unsplash.com/photo-1635859890085-ec8cb5466806?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    },
+    {
+        "id": 2,
+        "name": "Bullying & Sexual Harassment Policy",
+        "price": 1000,
+        "description": "She can customize a policy manual or rebuild the existing manual. This service package includes both bullying and harrasment, privacy of personal information, confidentiality and workplace safety.",
+        "img": "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bGF3fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "id": 3,
+        "name": "Legal Proceedings",
+        "price": 7000,
+        "description": "Representing employers for civil lawsuit in court and prursuing legal claims for breach of agreement and policy. After case assesment and base on hearing days price of this service package can be changed.",
+        "img": "https://images.unsplash.com/photo-1568092806323-8ec13dfa9b92?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvdXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    }
+]

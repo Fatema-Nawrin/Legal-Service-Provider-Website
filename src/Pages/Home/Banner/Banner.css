@@ -1,25 +1,23 @@
 .banner {
-    height: 600px;
+    height: 550px;
     width: 100%;
     background-color: rgb(30, 89, 95);
     color: white;
     font-family: 'Montserrat', sans-serif;
-
-
 }
 
-img {
-    height: 600px;
+.banner-img img {
+    height: 550px;
     width: 100%;
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:768px) {
     .banner {
-        height: 300px;
+        height: 100%;
         width: 100%;
     }
 
-    img {
+    .banner-img img {
         height: 300px;
         width: 100%;
     }

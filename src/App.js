@@ -5,6 +5,7 @@ import Blog from './Pages/Blog/Blog';
 import Checkout from './Pages/Checkout/Checkout';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
+import Register from './Pages/Login/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 
@@ -19,10 +20,11 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
       <Footer></Footer>
 
-    </div>
+    </div >
   );
 }
 
