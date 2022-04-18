@@ -19,10 +19,10 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='ms-auto fs-5' >
-                            <CustomLink to='/home' className='me-5' >HOME</CustomLink>
-                            <CustomLink to='/checkout' className='me-5' >CHECKOUT</CustomLink>
-                            <CustomLink to='/blog' className='me-5' >BLOG</CustomLink>
-                            <CustomLink to='/about' className='me-5' >ABOUT</CustomLink>
+                            <CustomLink to='/home' className='me-lg-5' >HOME</CustomLink>
+                            <CustomLink to='/checkout' className='me-lg-5' >CHECKOUT</CustomLink>
+                            <CustomLink to='/blog' className='me-lg-5' >BLOG</CustomLink>
+                            <CustomLink to='/about' className='me-lg-5' >ABOUT</CustomLink>
                             {
                                 user ?
                                     <CustomLink to='/login' className='me-5'> <button className='signout-btn' onClick={handleSignOut}>SIGN OUT</button> </CustomLink>
