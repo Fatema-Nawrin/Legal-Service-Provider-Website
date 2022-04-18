@@ -1,3 +1,8 @@
 header {
     font-family: 'Montserrat', sans-serif;
 }
+
+.signout-btn {
+    background: none;
+    border: none;
+}

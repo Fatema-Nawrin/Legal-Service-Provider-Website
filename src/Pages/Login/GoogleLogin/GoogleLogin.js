@@ -3,12 +3,23 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import googlelogo from '../../../Images/google-logo.png';
-import './GoogleLogin.css'
+import Loading from '../../Shared/Loading/Loading';
+import './GoogleLogin.css';
+
 const GoogleLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
     if (user) {
         navigate('/home');
+    }
+    if (loading) {
+        return <Loading></Loading>
+    }
+    let errorDiv;
+    if (error) {
+        errorDiv = <div>
+            <p className='text-danger'>Error:{error?.message}</p>
+        </div>
     }
     return (
         <div>
@@ -17,6 +28,7 @@ const GoogleLogin = () => {
                 <p className='mt-3 px-2'> or </p>
                 <div style={{ height: '2px' }} className='bg-dark w-50'></div>
             </div>
+            {errorDiv}
             <div>
                 <button onClick={() => signInWithGoogle()}
                     className='w-50 d-block mx-auto py-2 btn-style'>
