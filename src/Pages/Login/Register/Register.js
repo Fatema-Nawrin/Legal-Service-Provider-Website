@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Register.css';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import GoogleLogin from '../GoogleLogin/GoogleLogin';
 
 const Register = () => {
     const [
@@ -12,6 +13,7 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
     const navigate = useNavigate();
+    const [sendEmailVerification, sending] = useSendEmailVerification(auth);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -19,7 +21,11 @@ const Register = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         await createUserWithEmailAndPassword(email, password);
+        verification();
         navigate('/home');
+    }
+    const verification = async () => {
+        await sendEmailVerification();
     }
     return (
         <div className='register-form'>
@@ -31,8 +37,8 @@ const Register = () => {
                 <input className='submit-btn' type="submit" value="Register" />
                 <p>Already have an account? <Link className='text-decoration-none' to='/login'>Please Login</Link>
                 </p>
-
             </form>
+            <GoogleLogin></GoogleLogin>
         </div>
     );
 };

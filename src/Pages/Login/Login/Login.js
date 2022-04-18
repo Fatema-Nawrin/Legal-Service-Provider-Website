@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
 import { async } from '@firebase/util';
+import GoogleLogin from '../GoogleLogin/GoogleLogin';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -18,7 +19,13 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-
+    let from = location.state?.from?.pathname || "/";
+    let errorDiv;
+    if (error) {
+        errorDiv = <div>
+            <p className='text-danger'>Error:{error?.message}</p>
+        </div>
+    }
     const handleSubmit = (event) => {
         event.preventDefault();
         const email = emailRef.current.value;
@@ -39,6 +46,9 @@ const Login = () => {
             toast('Enter your email address first.')
         }
     }
+    if (user) {
+        navigate(from, { replace: true });
+    }
 
     return (
         <div className='login-form'>
@@ -47,6 +57,7 @@ const Login = () => {
                 <input type="email" ref={emailRef} name='email' placeholder='Your Email' required />
                 <input type="password" ref={passwordRef} name='password' placeholder='Password' required />
                 <input className='submit-btn' type="submit" value="Login" />
+                {errorDiv}
                 <p>New to the website?
                     <Link className='text-decoration-none' to='/register'> Please Sign up First</Link>
                 </p>
@@ -54,6 +65,7 @@ const Login = () => {
                     <button className='btn btn-link text-danger text-decoration-none' onClick={resetPassword}>Reset Password</button>
                 </p>
             </form>
+            <GoogleLogin></GoogleLogin>
             <ToastContainer></ToastContainer>
         </div>
     );
