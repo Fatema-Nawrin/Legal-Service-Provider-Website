@@ -1,5 +1,5 @@
 .login-form {
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     font-family: 'Roboto';
 }
@@ -20,14 +20,20 @@
     border: 1px solid gainsboro;
 }
 
-.submit-btn {
+.login-btn {
     color: white;
-    background-color: rgb(38, 89, 109);
+    background-color: salmon;
     font-size: 20px;
 }
 
-.submit-btn:hover {
+.login-btn:hover {
     background-color: white;
-    border: 2px solid rgb(38, 89, 109);
-    color: black;
+    border: 2px solid salmon;
+    color: salmon;
+}
+
+@media screen and (max-width:768px) {
+    .login-form {
+        width: 70%;
+    }
 }

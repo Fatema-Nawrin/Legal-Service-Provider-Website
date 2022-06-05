@@ -15,14 +15,13 @@ const Header = () => {
         <header>
             <Navbar className='mt-4' collapseOnSelect expand="lg" variant="light">
                 <Container>
-                    <Navbar.Brand style={{ color: 'rgb(25, 100, 130)' }} className='fs-1 fw-bolder' href="/">ASHLEY GRAY LAW</Navbar.Brand>
+                    <Navbar.Brand style={{ color: 'rgb(25, 100, 130)' }} className='fs-1 fw-bolder' href="/">ASHLEY GRAY  <span style={{ color: 'salmon' }}>LAW</span> </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='ms-auto fs-5' >
                             <CustomLink to='/home' className='me-lg-5' >HOME</CustomLink>
                             <CustomLink to='/checkout' className='me-lg-5' >CHECKOUT</CustomLink>
-                            <CustomLink to='/blog' className='me-lg-5' >BLOG</CustomLink>
-                            <CustomLink to='/about' className='me-lg-5' >ABOUT</CustomLink>
+
                             {
                                 user ?
                                     <CustomLink to='/login' className='me-5'> <button className='signout-btn' onClick={handleSignOut}>SIGN OUT</button> </CustomLink>

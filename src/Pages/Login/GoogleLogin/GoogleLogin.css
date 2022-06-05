@@ -1,5 +1,7 @@
 .btn-style {
-    background-color: rgb(38, 89, 109);
+    background-color: rgb(40, 90, 109);
     border-radius: 4px;
     color: white;
+    border: none;
+    font-size: 18px;
 }

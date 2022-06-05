@@ -29,15 +29,15 @@ const GoogleLogin = () => {
                 <div style={{ height: '2px' }} className='bg-dark w-50'></div>
             </div>
             {errorDiv}
-            <div>
+            <div className='pb-4'>
                 <button onClick={() => signInWithGoogle()}
-                    className='w-50 d-block mx-auto py-2 btn-style'>
+                    className='w-75 d-block mx-auto py-2 btn-style'>
                     <img
                         style={{ width: '30px' }}
                         src={googlelogo}
                         className='pe-1'
                         alt="" />
-                    Google Sign In
+                    Continue With Google
                 </button>
             </div>
         </div>

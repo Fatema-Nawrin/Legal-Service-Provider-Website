@@ -5,7 +5,6 @@ import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
-import { async } from '@firebase/util';
 import GoogleLogin from '../GoogleLogin/GoogleLogin';
 
 const Login = () => {
@@ -19,6 +18,7 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
     let from = location.state?.from?.pathname || "/";
     let errorDiv;
     if (error) {
@@ -51,17 +51,19 @@ const Login = () => {
 
     return (
         <div className='login-form'>
-            <h2>Login Here</h2>
+            <h2 className='text-uppercase'>Login Here</h2>
             <form onSubmit={handleSubmit}>
                 <input type="email" ref={emailRef} name='email' placeholder='Your Email' required />
                 <input type="password" ref={passwordRef} name='password' placeholder='Password' required />
-                <input className='submit-btn' type="submit" value="Login" />
+
+                <input className='login-btn' type="submit" value="Login" />
+
                 {errorDiv}
                 <p>New to the website?
-                    <Link className='text-decoration-none' to='/register'> Please Sign up First</Link>
+                    <Link className='text-decoration-none' to='/register'> Sign Up here</Link>
                 </p>
-                <p>Forgot Password?
-                    <button className='btn btn-link text-danger text-decoration-none' onClick={resetPassword}>Reset Password</button>
+
+                <p>Forgot Password?<button className='btn btn-link text-danger px-1 text-decoration-none' onClick={resetPassword}>Reset Password</button>
                 </p>
             </form>
             <GoogleLogin></GoogleLogin>

@@ -1,14 +1,71 @@
 .banner {
     height: 550px;
     width: 100%;
-    background-color: rgb(30, 89, 95);
+    background-color: rgb(38, 111, 119);
     color: white;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .banner-img img {
     height: 550px;
     width: 100%;
+}
+
+.banner-heading {
+    animation: textTransform 1.5s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes textTransform {
+    from {
+        transform: scale(0.4, 0.4);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+.slide-text {
+    transform: translateX(180%);
+    opacity: 0;
+    animation: slide-in 1.3s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+    20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: translateX(150%);
+    }
+
+    75% {
+        opacity: 0.7;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+}
+
+.banner-btn {
+    background-color: salmon;
+    outline: none;
+    color: white;
+    border: 0.2rem solid salmon;
+    padding: 0.5rem;
+}
+
+.banner-btn:hover {
+    background-color: white;
+    color: salmon;
+    border: 0.2rem solid salmon;
+
 }
 
 @media screen and (max-width:768px) {

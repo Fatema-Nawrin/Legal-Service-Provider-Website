@@ -7,7 +7,7 @@
 - Without reloading, can go to different pages.
 - Includes login, signup and signout process.
 - Email password and google authentication feature is added.
-- Private and protected rote function is added for checkout page.
+- Private and protected route function is added for checkout page.
 - Email verification and password reset function is included.
 
  ## Technology
@@ -17,6 +17,7 @@
  - React bootstrap
  - React toastify
  - React firebase hooks
+ - Fontawesome
 
 
 
